@@ -41,6 +41,7 @@ app.options('*', cors({ origin: allowedOrigins, credentials: true }));
 app.use(cookieParser());
 
 
+
 {/* ---------------------------
    API ENDPOINTS
 ----------------------------*/}

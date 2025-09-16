@@ -20,7 +20,10 @@ connectDB(); //Call from mongoDB connection from connectDB.js
 
 connectCloudinary();  //Connect cloudinary from cloudinary.js
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://mern-project-1-p94d.onrender.com"
+];
 
 
 {/* ---------------------------

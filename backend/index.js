@@ -33,7 +33,11 @@ const allowedOrigins = [
 
 // Isse ham data json ke format mai le sakhenge
 app.use(express.json());
-app.use(cors({origin: allowedOrigins, credentials: true}));
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+}));
+app.options('*', cors({ origin: allowedOrigins, credentials: true }));
 app.use(cookieParser());
 
 

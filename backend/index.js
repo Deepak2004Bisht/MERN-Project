@@ -20,10 +20,7 @@ connectDB(); //Call from mongoDB connection from connectDB.js
 
 connectCloudinary();  //Connect cloudinary from cloudinary.js
 
-const allowedOrigins = [
-    "http://localhost:5173",
-    "https://mern-project-1-p94d.onrender.com"
-];
+const allowedOrigins = ["http://localhost:5173"];
 
 
 {/* ---------------------------
@@ -33,13 +30,8 @@ const allowedOrigins = [
 
 // Isse ham data json ke format mai le sakhenge
 app.use(express.json());
-app.use(cors({
-    origin: allowedOrigins,
-    credentials: true
-}));
-app.options('*', cors({ origin: allowedOrigins, credentials: true }));
+app.use(cors({origin: allowedOrigins, credentials: true}));
 app.use(cookieParser());
-
 
 
 {/* ---------------------------

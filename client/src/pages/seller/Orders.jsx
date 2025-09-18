@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { assets} from "../../assets/assets";
 import { AppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
 
@@ -11,9 +10,9 @@ const Orders = () => {
     try {
         const {data} = await axios.get("api/order/seller");
         if(data.success){
-            setOrders(data.orders);
+          setOrders(data.orders);
         } else{
-            toast.error(data.message);
+          toast.error(data.message);
         }
     } catch (error) {
         toast.error(error.message);
@@ -35,7 +34,7 @@ const Orders = () => {
           <div className="flex gap-5">
             <img
               className="w-12 h-12 object-cover opacity-60"
-              src={`http://localhost:5000/images/${order.items[0].product.image[0]}`}
+              src={`http://localhost:5000/images/${order.item[0].product.image[0]}`}
               alt="boxIcon"
             />
             <>

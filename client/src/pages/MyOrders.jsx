@@ -9,14 +9,14 @@ const MyOrders = () => {
   const fetchOrders = async() =>{
     try {
       const {data} = await axios.get("api/order/user");
-      console.log(data);
+      // console.log(data);
       if(data.success){
         setMyOrders(data.orders);
       } else{
         toast.error(data.message);
       }
     } catch (error) {
-      
+      toast.error(error.message);
     }
   }
 

@@ -13,7 +13,6 @@ import orderRoutes from './routes/order.routes.js';
 import addressRoutes from './routes/address.routes.js'
 import { connectCloudinary } from './config/cloudinary.js';
 
-
 const app = express();
 
 connectDB(); //Call from mongoDB connection from connectDB.js
